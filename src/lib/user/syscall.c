@@ -183,19 +183,6 @@ inumber (int fd)
   return syscall1 (SYS_INUMBER, fd);
 }
 
-//
-#include "stdint.h"
-
-int syscall(int syscall_number) {
-  int retval;
-  asm volatile (
-    "movl %1, %%eax;\n"
-    "int $0x30;\n"
-    : "=a" (retval)
-    : "r" (syscall_number)
-    : "memory");
-  return retval;
-}
 
 void mem_usage(void) {
     syscall0(SYS_LIST_MEM); 
