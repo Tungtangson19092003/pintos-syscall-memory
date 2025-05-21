@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "tests.h": "c",
+        "*.inc": "c",
+        "syn-read.h": "c",
+        "stdio.h": "c"
+    }
+}
